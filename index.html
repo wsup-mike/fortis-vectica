@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fortis Vectica</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg1: #0d0d0d;
+      --bg2: #1a0033;
+      --bg3: #330033;
+      --accent: #ffb3ec;
+      --text-main: #ffffff;
+      --text-sub: #b3b3b3;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: radial-gradient(circle at top right, var(--bg3), var(--bg2), var(--bg1));
+      color: var(--text-main);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      animation: fadeIn 1.5s ease-in;
+    }
+
+    h1 {
+      font-size: 3rem;
+      letter-spacing: 1px;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      max-width: 600px;
+      line-height: 1.6;
+      color: var(--text-sub);
+      font-size: 1.1rem;
+    }
+
+    .tagline {
+      font-weight: 600;
+      color: var(--accent);
+      margin: 1.5rem 0;
+      letter-spacing: 0.5px;
+    }
+
+    footer {
+      position: absolute;
+      bottom: 30px;
+      font-size: 0.9rem;
+      color: #666;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+
+<!-- ===== Contact / Inquiry ===== -->
+<section id="contact" style="margin-top:48px">
+  <h2 style="font-size:2rem;margin:0 0 10px">Get in touch</h2>
+  <p style="color:#b3b3b3;margin:0 0 24px">
+    Tell us about your use case. We’ll respond quickly.
+  </p>
+
+  <div class="form-wrap">
+    <!-- Replace the SRC below in Step 5 with your Google Form embed URL -->
+    
+    <iframe
+      id="fv-form"
+      src="https://docs.google.com/forms/d/e/1FAIpQLScFDYHp3VUyULh_nyY-XIDMqmKEGFdhyodHLaPNNAjk62xJDg/viewform?embedded=true"
+      width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0"
+      style="border:1px solid rgba(255,255,255,.08); border-radius:16px; background:#0d0d0d">
+      Loading…
+    </iframe>
+  </div>
+
+  <style>
+    .form-wrap{
+      width: min(960px, 92vw);
+      height: 900px;                /* safe default; adjust after you embed */
+      margin: 0 auto 24px;
+      background: rgba(255,255,255,.03);
+      border-radius: 16px;
+      overflow: hidden;
+    }
+    @media (max-width: 520px){
+      .form-wrap{ height: 1050px; } /* more room on smaller screens */
+    }
+  </style>
+
+  <!-- Fallback link if iframes are blocked -->
+  <p style="margin:8px 0 0">
+    <a id="fv-form-link" href="https://docs.google.com/forms/d/e/1FAIpQLScFDYHp3VUyULh_nyY-XIDMqmKEGFdhyodHLaPNNAjk62xJDg/viewform?embedded=true" target="_blank" rel="noopener" style="color:#ffb3ec">
+      Open the form in a new tab
+    </a>
+  </p>
+</section>
+  
+<body>
+  <h1>Welcome to <span style="color: var(--accent)">Fortis Vectica</span></h1>
+  <div class="tagline">Applied AI Engineering — Intelligence. Designed.</div>
+  <p>
+    Our site is currently under construction as we prepare to unveil our next-generation
+    applied AI consulting platform.  
+    We’re building reliable, scalable, and human-aligned systems powered by modern
+    Large Language Models and multimodal AI.
+  </p>
+  <p>
+    Please check back soon for updates on our launch and early access announcements.
+  </p>
+
+  <footer>© 2025 Fortis Vectica · All Rights Reserved</footer>
+</body>
+</html>
