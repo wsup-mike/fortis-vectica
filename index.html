@@ -83,43 +83,56 @@
 </body>
 
   <!-- ===== Contact / Inquiry ===== -->
-<section id="contact" style="margin-top:48px">
-  <h2 style="font-size:2rem;margin:0 0 10px">Get in touch</h2>
-  <p style="color:#b3b3b3;margin:0 0 24px">
-    Tell us about your use case. We’ll respond quickly.
-  </p>
+<section id="contact" style="margin:56px 0 0">
+  <h2 style="font-size:1.9rem;margin:0 0 6px">Get in touch</h2>
+  <p style="color:#b3b3b3;margin:0 0 18px">Tell us about your use case. We’ll respond quickly.</p>
 
-  <div class="form-wrap">
-    <!-- Replace the SRC below in Step 5 with your Google Form embed URL -->
-    
-    <iframe
-      id="fv-form"
-      src="https://docs.google.com/forms/d/e/1FAIpQLScFDYHp3VUyULh_nyY-XIDMqmKEGFdhyodHLaPNNAjk62xJDg/viewform?embedded=true"
-      width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0"
-      style="border:1px solid rgba(255,255,255,.08); border-radius:16px; background:#0d0d0d">
-      Loading…
-    </iframe>
+  <div class="form-card">
+    <div class="form-scale">
+      <iframe
+        src="https://docs.google.com/forms/d/e/1FAIpQLScFDYHp3VUyULh_nyY-XIDMqmKEGFdhyodHLaPNNAjk62xJDg/viewform?embedded=true"
+        frameborder="0" marginheight="0" marginwidth="0"
+        style="width:640px;height:956px;border:0;background:#0d0d0d">
+      </iframe>
+    </div>
   </div>
 
   <style>
-    .form-wrap{
-      width: min(960px, 92vw);
-      height: 900px;                /* safe default; adjust after you embed */
-      margin: 0 auto 24px;
-      background: rgba(255,255,255,.03);
-      border-radius: 16px;
-      overflow: hidden;
+    /* Card wrapper */
+    .form-card{
+      width:min(720px, 92vw);
+      margin:0 auto;
+      padding:18px;
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:16px;
+      background:rgba(255,255,255,.03);
+      box-shadow: 0 10px 30px rgba(0,0,0,.25);
     }
-    @media (max-width: 520px){
-      .form-wrap{ height: 1050px; } /* more room on smaller screens */
+    /* Scale the embedded Google Form to look compact */
+    .form-scale{
+      /* Desktop scale */
+      --scale: .86;                 /* tweak between .75 and .92 to taste */
+      width: calc(640px * var(--scale));
+      height: calc(956px * var(--scale));
+      transform: scale(var(--scale));
+      transform-origin: top left;   /* keeps it aligned neatly */
+      overflow:hidden;
+      margin: 0 auto;
+    }
+    /* Mobile: slightly smaller for tidiness */
+    @media (max-width: 560px){
+      .form-scale{
+        --scale: .80;
+        width: calc(640px * var(--scale));
+        height: calc(1100px * var(--scale)); /* extra height for mobile UI */
+      }
     }
   </style>
 
-  <!-- Fallback link if iframes are blocked -->
-  <p style="margin:8px 0 0">
-    <!-- <a id="fv-form-link" href="https://docs.google.com/forms/d/e/1FAIpQLScFDYHp3VUyULh_nyY-XIDMqmKEGFdhyodHLaPNNAjk62xJDg/viewform?embedded=true" target="_blank" rel="noopener" style="color:#ffb3ec">
-      Open the form in a new tab
-    </a> -->
+  <p style="margin:10px 0 0">
+    Prefer a full-page view?
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLScFDYHp3VUyULh_nyY-XIDMqmKEGFdhyodHLaPNNAjk62xJDg/viewform?embedded=true"
+       target="_blank" rel="noopener" style="color:#ffb3ec">Open the form</a>
   </p>
-</section>  
+</section>
 </html>
