@@ -8,58 +8,64 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
 
   <style>
-    :root {
-      --bg1: #0d0d0d;
-      --bg2: #1a0033;
-      --bg3: #330033;
-      --accent: #ffb3ec;
-      --text-main: #ffffff;
-      --text-sub: #b3b3b3;
-    }
+  :root {
+    --bg1: #0d0d0d;
+    --bg2: #1a0033;
+    --bg3: #330033;
+    --accent: #ffb3ec;
+    --text-main: #ffffff;
+    --text-sub: #b3b3b3;
+  }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
-    body {
-      font-family: 'Inter', sans-serif;
-      background: radial-gradient(circle at top right, var(--bg3), var(--bg2), var(--bg1));
-      color: var(--text-main);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      text-align: center;
-      overflow: hidden;
-      animation: fadeIn 1.5s ease-in;
-    }
+  body {
+    font-family: 'Inter', sans-serif;
+    background: radial-gradient(circle at top right, var(--bg3), var(--bg2), var(--bg1));
+    color: var(--text-main);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    animation: fadeIn 1.5s ease-in;
+  }
 
-    svg {
-      width: min(360px, 70vw);
-      height: auto;
-      margin-bottom: 1rem;
-    }
+  svg {
+    width: min(600px, 85vw);     /* Larger for desktop but responsive */
+    height: auto;
+    margin-bottom: 1.2rem;
+    filter: drop-shadow(0 0 18px rgba(255,255,255,0.2)); /* adds subtle glow */
+  }
 
-    h2 {
-      font-weight: 400;
-      letter-spacing: 2px;
-      color: var(--text-sub);
-      font-size: 1rem;
-    }
+  /* Force internal fills/strokes to pure white */
+  svg * {
+    fill: #fff !important;
+    stroke: #fff !important;
+  }
 
-    @media (min-width: 768px) {
-      svg { width: 420px; }
-      h2 { font-size: 1.1rem; }
-    }
+  h2 {
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: #fff;
+    font-size: 1.2rem;
+  }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-  </style>
+  @media (max-width: 768px) {
+    svg { width: 75vw; }
+    h2 { font-size: 1rem; }
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
 </head>
 
 <body>
