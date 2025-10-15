@@ -36,8 +36,12 @@
     animation: fadeIn 1.5s ease-in;
   }
 
-  svg{ width:min(760px,86vw); height:auto; display:block; margin-inline:auto;
-     filter: drop-shadow(0 0 12px rgba(255,255,255,.18)); }
+  svg {
+    width: min(600px, 85vw);     /* Larger for desktop but responsive */
+    height: auto;
+    margin-bottom: 1.2rem;
+    filter: drop-shadow(0 0 18px rgba(255,255,255,0.2)); /* adds subtle glow */
+  }
 
   /* Force internal fills/strokes to pure white */
   svg * {
